@@ -1,0 +1,24 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  timeout: 5000
+  username: app_user
+
+development:
+  <<: *default
+  host: localhost
+  password: password
+  name: budget_development
+
+test:
+  <<: *default
+  host: localhost
+  password: password
+  name: budget_test
+
+production:
+  <<: *default
+  host: 192.168.56.101
+  password: password
+  name: budget
