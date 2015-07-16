@@ -5,4 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :income_expense_entries
+
+  def admin?
+    role == "admin"
+  end
 end
