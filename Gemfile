@@ -8,6 +8,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'unicorn'
+gem 'bootstrap-sass', '~> 2.3'
 
 group :development, :test do
   gem 'faker'
