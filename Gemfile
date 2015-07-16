@@ -10,6 +10,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'unicorn'
 gem 'bootstrap-sass', '~> 2.3'
 gem 'will_paginate-bootstrap'
+gem 'devise'
 
 group :development, :test do
   gem 'faker'
