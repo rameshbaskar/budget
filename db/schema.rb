@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150716030632) do
+ActiveRecord::Schema.define(version: 20150716030947) do
 
   create_table "categories", force: true do |t|
     t.string   "cat_name",   null: false
@@ -21,6 +21,17 @@ ActiveRecord::Schema.define(version: 20150716030632) do
   end
 
   add_index "categories", ["cat_name"], name: "index_categories_on_cat_name", unique: true, using: :btree
+
+  create_table "income_expense_entries", force: true do |t|
+    t.string   "trans_description",                          null: false
+    t.date     "trans_date",                                 null: false
+    t.decimal  "trans_amount",      precision: 10, scale: 2, null: false
+    t.string   "trans_currency",                             null: false
+    t.integer  "user_id",                                    null: false
+    t.integer  "category_id",                                null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
